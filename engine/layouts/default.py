@@ -1,7 +1,7 @@
 from engine.layouts.types import InitPoint
 from engine.color import Color
 
-DEFAULT = [
+DEFAULT = (
     InitPoint(1, Color.BLACK, 2),
     InitPoint(2, None, 0),
     InitPoint(3, None, 0),
@@ -26,4 +26,4 @@ DEFAULT = [
     InitPoint(22, None, 0),
     InitPoint(23, None, 0),
     InitPoint(24, Color.WHITE, 2),
-]
+)
