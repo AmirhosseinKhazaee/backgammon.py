@@ -11,7 +11,7 @@ class Board:
     """
 
     def __init__(self, arrange: tuple[InitPoint]):
-        self.initial_board = [
+        self.points = [
             Point(
                 index=point.index, checker_count=point.checker_count, color=point.color
             )
@@ -19,11 +19,11 @@ class Board:
         ]
 
     def get_point(self, index: int) -> Point:
-        valid_range = range(1, 25)
-        if index in valid_range:
-            return self.initial_board[index - 1]
+        self.points_length = len(self.points)
+        if 1 <= index <= self.points_length:
+            return self.points[index - 1]
         else:
-            raise ValueError("enter valid index (1 ,24)")
+            raise ValueError(f"enter valid index (1 ,{self.points_length})")
 
     def has_checker(self, index: int, color: Color) -> bool:
         point = self.get_point(index=index)
