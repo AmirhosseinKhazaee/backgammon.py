@@ -10,7 +10,7 @@ class Board:
     get_point let you get checker count and color of the point
     """
 
-    def __init__(self, arrange: tuple[InitPoint]):
+    def __init__(self, arrange: tuple[InitPoint,...]):
         self.points = [
             Point(
                 index=point.index, checker_count=point.checker_count, color=point.color
